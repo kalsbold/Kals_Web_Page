@@ -1,3 +1,44 @@
 body{
     background-color: powderblue;
 }
+
+#wrap{
+    width:100%; 
+}
+#header{
+    width:900px; 
+    height:130px; 
+    margin-left:100px; 
+    margin-bottom:10px; 
+    background-color:yellow;
+}
+h3{
+    font-size: 30px;
+}
+#main{
+    width:100%;
+    float:left; 
+}
+#menu{
+    width:200px;
+    height:500px; 
+    float:left; 
+    margin-left:100px; 
+    margin-right:10px; 
+    background-color:gray;    
+}
+#content{
+    width:690px; 
+    height:500px;
+    float:left; 
+    background-color:lightpink;
+}
+#footer{
+    width:900px; 
+    height:150px; 
+    float:left; 
+    margin-left:100px; 
+    margin-top:10px; 
+    background-color:orange;
+}
+
