@@ -1,44 +1,118 @@
 body{
+    min-width: 780px;
+    max-width: 1260px;
+    min-height: 1080px;
+    max-height: 2160px;
     background-color: powderblue;
+    
+}
+ul{
+    margin : 0;
+    padding : 0;
+    list-style: none;
+}
+a{
+    text-decoration: pink;
 }
 
-#wrap{
-    width:100%; 
+
+
+
+div{
+    border:1px solid #555;
+    background-color:lightcyan;
+    margin-left:50px; 
+    margin-right:50px;
+    margin-bottom:10px;
+    height:100%; 
+    border-radius : 1em;
 }
+
 #header{
-    width:900px; 
-    height:130px; 
-    margin-left:100px; 
-    margin-bottom:10px; 
-    background-color:yellow;
+    width : 92%;
+    height:100px;
+    text-align: center;
+    z-index: 5;
 }
 h3{
     font-size: 30px;
 }
-#main{
-    width:100%;
-    float:left; 
-}
 #menu{
-    width:200px;
-    height:500px; 
-    float:left; 
-    margin-left:100px; 
-    margin-right:10px; 
-    background-color:gray;    
+    height:70px; 
 }
 #content{
-    width:690px; 
-    height:500px;
-    float:left; 
-    background-color:lightpink;
+    text-align: center;
+    height : 100%;
+    margin-bottom: 120px;
 }
 #footer{
-    width:900px; 
-    height:150px; 
-    float:left; 
-    margin-left:100px; 
-    margin-top:10px; 
-    background-color:orange;
+    text-align: center;
+    left :1;
+    bottom:0;
+    position: fixed;
+    width : 90.55%;
+    height : 100px;
+    clear: both;
 }
 
+/*1레벨 메뉴*/
+.dropdownmenu > li{
+    float : left;
+    position : relative;
+    background-color: lightcyan;
+    text-align: center;
+    width : 25%;
+    border-radius : 1em;
+}
+/*가로, 배경, 크기 지정*/
+.dropdownmenu > li > a{
+    display : inline-block;
+    font-size : 16px;
+    color : darkblue;
+    
+    line-height: 70px;
+}
+/*호버링 설정.*/
+.dropdownmenu > li:hover{
+    background-color: darkorchid;
+}
+
+.dropdownmenu > li:hover > ul{
+    top : 70px;
+    left : 0;
+}
+
+/*2레벨 메뉴*/
+.dropdownmenu  ul{
+    position : absolute;
+    top: -9999px;
+    z-index: 9999;
+    background-color: lightsalmon;
+    text-align: left;
+    width : 140px;
+}
+
+.dropdownmenu  ul li{
+    position: relative;
+}
+
+.dropdownmenu ul a{
+    display : block;
+    font-size : 12px;
+    color : darkblue;
+    background-color: lightsalmon;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.dropdownmenu ul a:hover{
+    color : darkorange;
+    background-color: lightsalmon;
+}
+
+/*2레벨 호버중 3레벨 메뉴 위치*/
+.dropdownmenu ul li:hover > ul{
+    position : absolute;
+    top : 0;
+    left:100%;
+}
